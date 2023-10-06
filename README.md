@@ -4,6 +4,6 @@
  -A-S-D-F-H-J-K-L <br>
  -Using Headfones will be benifitial to you <br>
  -18+ <br>
- -just for fun /_\ Ise dil pe lijiye kahi or lijiye /_\ <br>
+ -just for fun <br>
 </p>
- 
+ /_\ Ise dil pe lijiye kahi or lijiye /_\ 
