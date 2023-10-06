@@ -6,4 +6,4 @@
  -18+ <br>
  -just for fun <br>
 </p>
- /_\ Ise dil pe lijiye kahi or lijiye /_\ 
+*Ise dil pe lijiye kahi or lijiye*
