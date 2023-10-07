@@ -9,6 +9,15 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy" rel="stylesheet">
     
     <style>
+         @keyframes blink
+          {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+          }
+          .blinking {
+            animation: blink 1s infinite;
+        }
         body{
             background-image:url(949094.jpg) ;
             background-size: cover;
@@ -16,8 +25,8 @@
 
         }
         .btn{
-            color: #fff;
-      
+            color: #000000;
+            font-weight: 500;
            background-color: aquamarine;
            border: 1px solid black;
         }
@@ -33,14 +42,15 @@
 </head>
 <body>
     <div class="container ">
-        <h1 style="text-align:center; color: cornsilk;">My-Piano-App</h1>
+        <h1 style="text-align:center; color: cornsilk;">piano-app</h1>
+
     <div id="btns" >
     <!-- <a class="btn btn-primary" href="#" role="button">Link</a> -->
     <button class="btn  col-1 mx-4" id="A">A</button>
     <button class="btn  col-1 mx-4" id="S">S</button>
     <button class="btn  col-1 mx-4" id="D">D</button>
     <button class="btn  col-1 mx-4" id="F">F</button>
-    <!-- <button class="btn  col-1 mx-4" id="C">C</button> -->
+    
     <button class="btn  col-1 mx-4" id="H">H</button>
     <button class="btn  col-1 mx-4" id="J">J</button>
     <button class="btn  col-1 mx-4" id="K">K</button>
@@ -68,12 +78,36 @@
        <audio id="K-Audio"
         src="louca_bebou.mp3" type="audio/mpeg"></audio>
       
+       <audio id="l-Audio"
+        src="audio-editor-output.mp3" type="audio/mpeg"></audio>
+      
     <script>
         // let a = document.getElementById(A);
+        const btnA = document.getElementById('A');
+        const btnS = document.getElementById('S');
+        const btnD = document.getElementById('D');
+        const btnF = document.getElementById('F');
+        const btnH = document.getElementById('H');
+        const btnJ = document.getElementById('J');
+        const btnK = document.getElementById('K');
+        const btnL = document.getElementById('L');
+        
+        window.addEventListener('beforeunload', function (event) {
+            // Display a confirmation message
+            event.returnValue = ' Type any buttons among  A-S-D-F-H-J-K-L ';
+        });
+        
+        alert('Type any buttons among  A-S-D-F-H-J-K-L ');
+        
+        function blk() {
+            btnK.classList.remove('blinking');
+        }
 
         function Aaudioplay(){
             var audio = document.getElementById('A-Audio');
             audio.play();
+           
+        
         }
         function Saudioplay(){
             var audio = document.getElementById('S-Audio');
@@ -98,39 +132,54 @@
         function Kaudioplay(){
             var audio = document.getElementById('K-Audio');
             audio.play();
+           
+        }
+        function laudioplay(){
+            var audio = document.getElementById('l-Audio');
+            audio.play();
         }
         // 
 
         document.addEventListener("keydown",function play(){
-            if (event.keyCode === 65) { // Example: Spacebar key (keyCode 32)
+            if (event.keyCode === 65) { 
                 Aaudioplay();
         }});
         document.addEventListener("keydown",function play(){
-            if (event.keyCode === 83) { // Example: Spacebar key (keyCode 32)
+            if (event.keyCode === 83) { 
                 Saudioplay();
         }});
         document.addEventListener("keydown",function play(){
-            if (event.keyCode === 68) { // Example: Spacebar key (keyCode 32)
+            if (event.keyCode === 68) { 
                 Daudioplay();
         }});
         document.addEventListener("keydown",function play(){
-            if (event.keyCode === 70) { // Example: Spacebar key (keyCode 32)
+            if (event.keyCode === 70) { 
                 Faudioplay();
         }});
         document.addEventListener("keydown",function play(){
-            if (event.keyCode === 72) { // Example: Spacebar key (keyCode 32)
+            if (event.keyCode === 72) { 
                 Haudioplay();
         }});
         document.addEventListener("keydown",function play(){
             
-            if (event.keyCode === 74) { // Example: Spacebar key (keyCode 32)
+            if (event.keyCode === 74) { 
                 Jaudioplay();
         }});
         document.addEventListener("keydown",function play(){
             
-            if (event.keyCode === 75) { // Example: Spacebar key (keyCode 32)
+            if (event.keyCode === 75) { 
                 Kaudioplay();
+                btnK.click();
+            btnK.classList.add('blinking');
+            setTimeout(blk,7000);
         }});
+        document.addEventListener("keydown",function play(){
+            
+            if (event.keyCode === 76) { 
+                laudioplay();
+            
+        }});
+
     </script>
 </body>
 </html>
