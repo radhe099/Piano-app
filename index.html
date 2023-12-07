@@ -10,31 +10,65 @@
     
     <style>
         body{
-            background-image:url(949094.jpg) ;
-            background-size: cover;
+            background-image:url(akin-cakiner-nkUFXi0JSX8-unsplash.jpg) ;
+           
+           margin: 0; /* background-size: cover; */
             font-family: "Raleway", sans-serif;
-
         }
         .btn{
-            color: #fff;
-      
+            color: #000000;
+            font-weight: 900;
+            font-size: 16;
            background-color: aquamarine;
            border: 1px solid black;
         }
         #btns{
             /* background-color: rgb(236, 240, 239); */
             border-radius: 50px;
+            margin-top: 80px;
             display: flex;
-            justify-content: center;
-            margin-top: 220px;
+            justify-content: space-between;
+            /* margin-top: 20px; */
             align-items: center;
         }
+        @media only screen and (max-width: 600px) {
+  #btn {  border-radius: 50px;
+            margin-top: 80px;
+            /* margin-top: 20px; */
+    font-size: 14px;
+    flex: 1; /* Each flex item takes equal space */
+  min-width: 0; /* Allow items to shrink beyond their content size */
+  box-sizing: border-box; /* Include padding and border in the total width */
+
+  /* Add any other styling for your flex items here */
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    overflow-x: hidden;
+
+    width: 100%; display: flex; flex-wrap: wrap; padding: 1px; 
+    font-size: 14px;
+  }
+}
     </style>
 </head>
 <body>
-    <div class="container ">
-        <h1 style="text-align:center; color: cornsilk;">My-Piano-App</h1>
-    <div id="btns" >
+    <div class="heading" style="width: 100%; display: flex; justify-content: space-between; padding: 10px; margin:15px;">
+        <h1 style="color: rgb(255, 255, 255);">Piano on KeyBoard</h1>
+        <h1 style="color: rgb(255, 255, 255);">Press Home-Row Keys</h1>
+
+
+    </div>
+    <div class="container " style="background-color: #fff; opacity: 31%; height: 200px; position: absolute; position: absolute;
+    top: 50%; border-radius: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);">
+     
+    <div id="btns"  >
     <!-- <a class="btn btn-primary" href="#" role="button">Link</a> -->
     <button class="btn  col-1 mx-4" id="A">A</button>
     <button class="btn  col-1 mx-4" id="S">S</button>
@@ -45,6 +79,7 @@
     <button class="btn  col-1 mx-4" id="J">J</button>
     <button class="btn  col-1 mx-4" id="K">K</button>
     <button class="btn  col-1 mx-4" id="L">L</button>
+</div>
 </div>
     <!-- Audios -->
     <audio id="A-Audio"
@@ -67,6 +102,14 @@
       
        <audio id="K-Audio"
         src="louca_bebou.mp3" type="audio/mpeg"></audio>
+
+        <!-- copyright -->
+        <div class="copyright" style="top: 50%; border-radius: 50px;
+        left: 50%;
+        transform: translate(-50%, -50%);">
+            <h2 style="color: #000000;">©radhe098.co</h2>
+        </div>
+
       
     <script>
         // let a = document.getElementById(A);
